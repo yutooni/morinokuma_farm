@@ -22,6 +22,8 @@ const Experience = () => {
     },
   ];
 
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <section id="marihime" className="py-24 bg-gradient-to-br from-red-50 to-orange-50">
       <div className="container mx-auto px-6">
@@ -39,7 +41,7 @@ const Experience = () => {
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24 max-w-6xl mx-auto">
           <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-xl order-2 md:order-1 group">
             <img
-              src="/images/strawberry-basket.webp"
+              src={imagePath('images/strawberry-basket.webp')}
               alt="まりひめ"
               className="w-full h-full object-cover"
             />

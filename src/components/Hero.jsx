@@ -1,9 +1,11 @@
 const Hero = () => {
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <section className="relative min-h-screen pt-16 bg-gradient-to-br from-red-50 to-orange-50">
       <div className="relative w-full h-screen overflow-hidden">
         <img
-          src="/images/strawberry-basket.webp"
+          src={imagePath('images/strawberry-basket.webp')}
           alt="新鮮ないちご"
           className="w-full h-full object-cover"
         />

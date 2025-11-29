@@ -22,12 +22,14 @@ const About = () => {
     },
   ];
 
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
+
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* 背景のくまキャラクター */}
       <div className="absolute top-20 right-10 pointer-events-none hidden lg:block">
         <img
-          src="/images/logo.webp"
+          src={imagePath('images/logo.webp')}
           alt=""
           className="w-48 h-auto transform rotate-12"
         />

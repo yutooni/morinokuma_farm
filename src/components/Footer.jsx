@@ -1,5 +1,6 @@
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
   return (
     <footer className="bg-gray-800 text-white py-12">
@@ -9,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/images/logo-bear.webp"
+                src={imagePath('images/logo-bear.webp')}
                 alt="森のくま農園"
                 className="h-14 w-14 object-cover rounded-full"
               />

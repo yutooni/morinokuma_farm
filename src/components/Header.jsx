@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -18,7 +19,7 @@ const Header = () => {
           {/* ロゴ */}
           <div className="flex items-center gap-2">
             <img
-              src="/images/logo-bear.webp"
+              src={imagePath('images/logo-bear.webp')}
               alt="森のくま農園"
               className="h-12 w-12 object-cover rounded-full"
             />

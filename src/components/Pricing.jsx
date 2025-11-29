@@ -9,7 +9,7 @@ const Pricing = () => {
         '糖度：12度以上',
         '贈答用に最適',
       ],
-      image: '/images/strawberry-pack.webp',
+      image: 'images/strawberry-pack.webp',
       recommended: true,
     },
     {
@@ -21,17 +21,19 @@ const Pricing = () => {
         '糖度：11度以上',
         'ご自宅用におすすめ',
       ],
-      image: '/images/strawberry-basket.webp',
+      image: 'images/strawberry-basket.webp',
       recommended: false,
     },
   ];
+
+  const imagePath = (path) => `${import.meta.env.BASE_URL}${path}`;
 
   return (
     <section id="products" className="py-24 bg-white relative overflow-hidden">
       {/* 背景のくまキャラクター */}
       <div className="absolute bottom-32 left-10 pointer-events-none hidden lg:block">
         <img
-          src="/images/logo-delivery.webp"
+          src={imagePath('images/logo-delivery.webp')}
           alt=""
           className="w-64 h-auto"
         />
@@ -64,7 +66,7 @@ const Pricing = () => {
 
               <div className="h-72 overflow-hidden">
                 <img
-                  src={product.image}
+                  src={imagePath(product.image)}
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
